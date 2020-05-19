@@ -72,7 +72,7 @@ else
 endif
 
 " Check to see if we can do italic
-if (&t_ZH != '' && &t_ZH != '[7m')
+if (&t_ZH != '' && &t_ZH != '[7m') || has('nvim')
   let s:italic = 1
 else
   let s:italic = 0
