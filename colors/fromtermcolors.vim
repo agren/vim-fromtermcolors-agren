@@ -85,7 +85,7 @@ endif
 if &background == "dark" && s:gt_eight
 
   let s:brightbg          = 'BrightBlack'
-  let s:brightfg          = 'NormalWhite'
+  let s:brightfg          = 'BrightWhite'
 
   let s:normalbg          = 'NormalBlack'
   let s:normalfg          = 'NormalWhite'
