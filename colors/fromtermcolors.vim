@@ -198,7 +198,7 @@ call <SID>set_colors("Conceal"  , ""     , "NONE" , "")
 call <SID>set_colors("Cursor"   , "NONE" , s:cursoryellow , "reverse")
 call <SID>set_colors("CursorIM" , ""     , ""     , "")
 
-call <SID>set_colors("CursorLineNr" , s:cursoryellow , s:normalblue      , "")
+call <SID>set_colors("CursorLineNr" , s:cursoryellow , s:normalbg      , "")
 call <SID>set_colors("Directory"    , s:brightblue , ""         , "")
 call <SID>set_colors("DiffAdd"      , s:normalbg   , s:normalgreen , "")
 call <SID>set_colors("DiffDelete"   , s:normalbg   , s:normalred   , "")
@@ -207,22 +207,17 @@ call <SID>set_colors("DiffText"     , s:normalbg   , s:brightcyan     , "NONE")
 hi link EndOfBuffer NonText
 call <SID>set_colors("ErrorMsg"     , s:normalfg     , s:normalred      , "")
 
-if s:brightfg != s:brightbg " Needs to be different from SignColumn
-  call <SID>set_colors("VertSplit" , s:normalblue , "" , "NONE")
-else
-  call <SID>set_colors("VertSplit" , s:normalfg     , s:normalfg , "reverse")
-endif
+call <SID>set_colors("VertSplit" , s:brightbg , "" , "NONE")
 
 if s:brightfg != s:brightbg
   call <SID>set_colors("Folded"     , s:brightfg , s:brightbg    , "")
   call <SID>set_colors("FoldColumn" , s:brightfg , s:brightbg    , "")
-  call <SID>set_colors("SignColumn" , s:brightfg , s:brightbg    , "")
 else
   call <SID>set_colors("Folded"     , "NONE"   , s:brightfg , "")
   call <SID>set_colors("FoldColumn" , "NONE"   , s:brightfg , "")
-  call <SID>set_colors("SignColumn" , "NONE"   , s:brightfg , "")
 endif
 
+call <SID>set_colors("SignColumn" , s:brightfg , s:normalbg    , "")
 call <SID>set_colors("IncSearch"  , s:normalblue , s:brightfg , "")
 call <SID>set_colors("LineNr"     , s:brightbg          , ""      , "")
 call <SID>set_colors("MatchParen" , s:normalbg       , s:brightfg  , "")
@@ -259,8 +254,8 @@ call <SID>set_colors("SpellBad"         , s:normalred, s:normalfg, "reverse")
 call <SID>set_colors("SpellCap"         , "", s:normalred, "reverse")
 call <SID>set_colors("SpellLocal"       , "", s:normalred, "reverse")
 call <SID>set_colors("SpellRare"        , s:normalred, s:normalfg, "reverse")
-call <SID>set_colors("StatusLine"       , s:normalyellow, "", "reverse")
-call <SID>set_colors("StatusLineNC"     , s:normalblue, s:brightbg, "")
+call <SID>set_colors("StatusLine"       , s:normalfg, s:brightbg, "NONE")
+call <SID>set_colors("StatusLineNC"     , s:normalbg, s:brightbg, "NONE")
 call <SID>set_colors("StatusLineTerm"   , s:brightgreen, "NONE", "reverse")
 call <SID>set_colors("StatusLineTermNC" , s:normalgreen , "NONE", "reverse")
 call <SID>set_colors("TabLine"          , s:brightbg, s:normalblue, "NONE")
