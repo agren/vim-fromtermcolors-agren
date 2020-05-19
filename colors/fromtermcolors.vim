@@ -220,7 +220,7 @@ endif
 call <SID>set_colors("SignColumn" , s:brightfg , s:normalbg    , "")
 call <SID>set_colors("IncSearch"  , s:normalblue , s:brightfg , "")
 call <SID>set_colors("LineNr"     , s:brightbg          , ""      , "")
-call <SID>set_colors("MatchParen" , s:normalbg       , s:brightfg  , "")
+call <SID>set_colors("MatchParen" , ""           , s:brightbg  , "")
 call <SID>set_colors("ModeMsg"    , s:brightgreen        , ""      , "")
 call <SID>set_colors("MoreMsg"    , s:brightgreen        , ""      , "")
 call <SID>set_colors("NonText"    , s:brightbg          , ""      , "")
